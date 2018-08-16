@@ -2,18 +2,17 @@
 import React from "react";
 
 const Nav = props => (
-  <nav>
-    <ul>
-      <li>
-        <a href="/clicky-game/">{props.title}</a>
-      </li>
+  
+  <nav className = "navbar navbar-dark bg-dark">
+  <div class="container">
+  <a className ="navbar-brand" href="/clicky-game/">{props.title}</a>
 
-      <li id="right-wrong">{props.rightWrong}</li>
+      <span id="right-wrong">{props.rightWrong}</span>
 
-      <li id="current-score">Current Score: {props.score}</li>
+      <span id="current-score">Current Score: {props.score}</span>
 
-      <li id="top-score">Top Score: {props.topScore}</li>
-    </ul>
+      <span id="top-score">Top Score: {props.topScore}</span>
+  </div>
   </nav>
 );
 

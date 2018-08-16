@@ -4,12 +4,14 @@ import React from "react";
 
 const Card = props => (
     <div
-        class="card"
+        className="card"
         value={props.id}
         onClick={() => props.handleClick(props.id)}
     >
-        <div class="image">
+        <div className="image">
             <img alt={props.name} src={props.image} />
         </div>
     </div>
 );
+
+export default Card;

@@ -17,9 +17,6 @@ function shuffle(array) {
   return array;
 };
 
-
-
-
 class App extends Component {
   state = {
     characters,
@@ -44,11 +41,13 @@ class App extends Component {
       currentScore: newScore,
       rightWrong: ""
     });
-    if (newScore >= this.state.topScore) {
+
+    if (newScore === 12) {
+      this.setState({ rightWrong: "Victory!" });
       this.setState({ topScore: newScore });
     }
-    else if (newScore === 12) {
-      this.setState({ rightWrong: "Victory!" });
+    else if (newScore >= this.state.topScore) {
+      this.setState({ topScore: newScore });
     }
     this.handleShuffle();
   };
